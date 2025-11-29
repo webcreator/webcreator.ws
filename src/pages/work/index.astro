@@ -1,0 +1,146 @@
+---
+import Layout from '../../layouts/BaseLayout.astro';
+---
+
+<Layout title="Work | UI/UX, Apps design and Mobile-first Development – Digital Agency Webcreator">
+
+<script>
+  import '../../assets/js/app.min.js';
+</script>
+<script async src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+    jQuery( document ).ready(function( $ ) {
+	
+		window.$grid = false;
+
+        $('.tags').on( 'click', '.tag-item', function() {
+            var filterValue = $( this ).attr('data-filter');
+			
+			if (!window.$grid) {
+				window.$grid = $('.projects').isotope({
+					itemSelector: '.col-md-6',
+					layoutMode: 'fitRows'
+				});
+				console.log('init');
+			}
+			
+            window.$grid.isotope({ filter: filterValue });
+    
+            $('.tag-item').each( function( i, btn ) {
+                $(this).removeClass('active');
+            });
+    
+            $( this ).addClass('active');
+        });
+		
+    });
+	
+</script>
+    
+
+<div class="our-projects-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="our-projects__title">
+                    Selected work 
+                </h1>
+                <div class="tags">
+                    <div class="tag-item active" data-filter="*">All</div>
+                    <div class="tag-item" data-filter=".ui">UI/UX</div>
+                    <div class="tag-item" data-filter=".design">Design</div>
+                    <div class="tag-item" data-filter=".app">Application</div>
+                    <div class="tag-item" data-filter=".branding">Branding</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row projects">
+
+            <div class="col-md-6 app ui">
+                <div class="our-projects__item">
+                    <a href="/work/new-ui-for-motwi-saas-and-design-system/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/480shots_so.png" alt="UI UX Design Systems"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/new-ui-for-motwi-saas-and-design-system/">Motwi IoT SaaS</a></div>
+                    <div class="our-projects__item-tags">UI/UX and Design System</div>
+                </div>
+            </div> 
+
+            <div class="col-md-6 app ui">
+                <div class="our-projects__item">
+                    <a href="/work/illements/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/Tablet-Iphone31.png" alt="UX and Development"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/illements/">Illements subscription service</a></div>
+                    <div class="our-projects__item-tags">UI, UX and Development</div>
+                </div>
+            </div> 
+            <div class="col-md-6 design app ui">
+                <div class="our-projects__item">
+                    <a href="/work/life-goals-application-ui-and-ux/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects_lifegoals-app-design.webp" alt="Lifetime Goals App UI/UX Design "></div></a>
+                    <div class="our-projects__item-title"><a href="/work/life-goals-application-ui-and-ux/">Lifetime Goals App</a></div>
+                    <div class="our-projects__item-tags">App prototype, Design and Development</div>
+                </div>
+            </div> 
+ <div class="col-md-6 design app ui">
+                <div class="our-projects__item">
+                    <a href="/work/abletunes-digital-store/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects_abletunes.png" alt="Abletunes Digital Store"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/abletunes-digital-store/">Abletunes Digital Store v3</a></div>
+                    <div class="our-projects__item-tags">E-commerce Development</div>
+                </div>
+            </div> 
+
+            <div class="col-md-6 design app ui">
+                <div class="our-projects__item">
+                    <a href="/work/templeton-music-store/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/templeton-digital-store.webp" alt="E-commerce development"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/templeton-music-store/">Templeton Music Store</a></div>
+                    <div class="our-projects__item-tags">E-commerce Design and Development</div>
+                </div>
+            </div>
+
+            <div class="col-md-6 design app">
+                <div class="our-projects__item">
+                    <a href="/work/scan-magazine-website-development/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects_scanmagazine_11.png" alt="WordPress Publishing platform development"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/scan-magazine-website-development/">Scan Magazine</a></div>
+                    <div class="our-projects__item-tags">Publishing platform on WordPress</div>
+                </div>
+            </div>
+
+           <div class="col-md-6 design ui">
+                <div class="our-projects__item">
+                    <a href="/work/onesourceprocess/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/Mackbook-11.png" alt="Redesign and CRO"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/onesourceprocess/" target="_blank" rel="noopener">One Source Process</a></div>
+                    <div class="our-projects__item-tags">Redesign and CRO</div>
+                </div>
+            </div> 
+
+            <div class="col-md-6 design app ui">
+                <div class="our-projects__item">
+                    <a href="/work/joyn-analytics/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects_joyn.png" alt="iOS App UI/UX"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/joyn-analytics/">JOYN Analytics iOS App</a></div>
+                    <div class="our-projects__item-tags">App identity, Prototyping and UI/UX</div>
+                </div>
+            </div>
+
+           <div class="col-md-6 design ui">
+                <div class="our-projects__item">
+                    <a href="/work/new-site-for-office-planning/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects_op_1.png" alt="laptop"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/new-site-for-office-planning/" target="_blank" rel="noopener">Office Planning Store</a></div>
+                    <div class="our-projects__item-tags">UI/UX and Digital Design</div>
+                </div>
+            </div> 
+           <div class="col-md-6 design branding">
+                <div class="our-projects__item">
+                    <a href="/work/crm-branding-and-digital-design/"><div class="overflow-hidden"><img decoding="async" class="our-projects__item-img" src="/assets/img/work/projects-2_crm.png" alt="laptop"></div></a>
+                    <div class="our-projects__item-title"><a href="/work/crm-branding-and-digital-design/" target="_blank" rel="noopener">CRM Data Solutions</a></div>
+                    <div class="our-projects__item-tags">Branding, Site Design and CRM Development </div>
+                </div>
+            </div>
+     
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+</Layout>

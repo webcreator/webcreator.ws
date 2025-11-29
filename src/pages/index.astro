@@ -1,11 +1,347 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/BaseLayout.astro';
+import LastWork from "../components/LastWork.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="UI/UX, Apps design and Mobile-first Development – Digital Agency Webcreator">
+
+<script>
+  import '../assets/js/index-animation.min.js';
+</script>
+<script>
+  import '../assets/js/app.min.js';
+</script>
+
+      <script>
+jQuery(document).ready(function(){
+
+	window.runAnimation = false;
+	
+	var blockWithAnimation = $('.last .digital-animation');
+
+	$(blockWithAnimation).css('min-height', '430px');
+  
+	$(window).scroll(function() {
+
+		var el = $(blockWithAnimation);
+
+		   var hT = $(el).offset().top,
+			   hH = $(el).outerHeight(),
+			   wH = $(window).height(),
+			   wS = $(this).scrollTop();
+	   
+	   if (wS > (hT+hH-wH)) {
+	   
+			if (!window.runAnimation) {
+
+				$.each($(".devices-animation"), function(idx, el){
+				
+					$(el).css('display', 'none');
+					
+					setTimeout(function () {
+					  $(el).css('display', 'block');
+					  if (idx > 2) {
+						window.runAnimation = true;
+					  }
+					});
+				
+					
+				});
+				
+			
+			}
+	   
+			
+		   
+	   } else {
+			window.runAnimation = false;
+	   }
+	   
+	});  
+  
+});
+</script>
+
+<div class="heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-11">
+                <h1 class="heading-superTitle wow fadeInLeft">
+Improving User Satisfaction Through Design</h1>
+<h2>UI/UX Design, Web and Apps Development</h2>               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="advantages-section first">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="advantage-item">
+                     <div class="advantage-img animation-1">
+                        <div class="animation-block scene-1">
+                            <img decoding="async" class="under" src="../assets/img/animation-1/scene-1/under.jpg" alt="img">
+                            <img decoding="async" class="n-phone" src="../assets/img/animation-1/scene-1/phone.png" alt="phone">
+                            <img decoding="async" class="above" src="../assets/img/animation-1/scene-1/above.jpg" alt="img">
+                        </div>
+                        <div class="animation-block scene-2">
+                            <img decoding="async" class="n-tablet" src="/assets/img/animation-1/scene-2/tablet.png" alt="tablet">
+                            <img decoding="async" class="above" src="/assets/img/animation-1/scene-2/above.jpg" alt="img">
+                        </div>
+                        <div class="animation-block scene-3">
+                            <img decoding="async" class="n-tablet" src="/assets/img/animation-1/scene-3/tablet.png" alt="tablet">
+                            <img decoding="async" class="n-phone" src="/assets/img/animation-1/scene-3/phone.png" alt="phone">
+                        </div>
+                    </div>
+             <div class="advantage-text order-md-1">
+                        <div class="advantage-title">
+                            Rapid Digital Platforms
+                        </div>
+                        Custom subscription services development
+                        <div class="advantage-point screen-purpure">
+                            <div class="advantage-point__title">
+                                Fast Work on Any Devices
+                            </div>
+                            Design robust ecommerce platforms to sell digital products and subscription sevices.
+                        </div>
+                        <div class="advantage-point circle-purpure">
+                            <div class="advantage-point__title">
+                                Conversion Rate Optimization
+                            </div>
+                            Increasing the percentage of visitors to a store that convert into customers.
+                        </div>
+                        <a href="/fast-e-commerce/" class="btn purpure">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="advantages-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+             <div class="advantage-item">
+<div class="advantage-img animation-2 order-md-2">
+                        <div class="animation-block scene-1">
+                            <img decoding="async" class="n-phone" src="/assets/img/animation-2/scene-1/phone.png" alt="phone">
+                            <img decoding="async" class="top" src="/assets/img/animation-2/scene-1/top.png" alt="img">
+                            <img decoding="async" class="bottom" src="/assets/img/animation-2/scene-1/bottom.png" alt="img">
+                        </div>
+                        <div class="animation-block scene-2">
+                            <img decoding="async" class="n-phone" src="/assets/img/animation-2/scene-2/phone.png" alt="phone">
+                            <div class="blocks">
+                                <div class="blocks-inner">
+                                    <img decoding="async" src="/assets/img/animation-2/scene-2/blocks/block-1.png" alt="img">
+                                    <img decoding="async" src="/assets/img/animation-2/scene-2/blocks/block-2.png" alt="img">
+                                    <img decoding="async" src="/assets/img/animation-2/scene-2/blocks/block-3.png" alt="img">
+                                </div>
+                            </div>
+                            <img decoding="async" class="n-small n-small-1" src="/assets/img/animation-2/scene-2/small-1.png" alt="img">
+                            <img decoding="async" class="n-small n-small-2" src="/assets/img/animation-2/scene-2/small-2.png" alt="img">
+                        </div>
+                         <div class="animation-block scene-3">
+                            <div class="side -left">
+                                <img decoding="async" class="n-phone" src="/assets/img/animation-2/scene-3/left-phone.png" alt="phone">
+                                <img decoding="async" class="search" src="/assets/img/animation-2/scene-3/search.png" alt="img">
+                            </div>
+                            <div class="side -right">
+                                <img decoding="async" class="n-phone" src="/assets/img/animation-2/scene-3/right-phone.png" alt="phone">
+                                <img decoding="async" class="block" src="/assets/img/animation-2/scene-3/block.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="advantage-text order-md-1">
+                        <div class="advantage-title">
+                            Prototyping and UI/UX design for Apps
+                        </div>
+                        Design Apps your customers love
+                        <div class="advantage-point screen-green2">
+                            <div class="advantage-point__title">
+                                Mobile Apps
+                            </div>
+                            Design with empathy for your users
+                        </div>
+                        <div class="advantage-point circle-green2">
+                            <div class="advantage-point__title">
+                                Online Services
+                            </div>
+                            Influence decisions throughout the customer journey and User Research
+                        </div>
+                        <a href="/ui-ux/" class="btn green">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 
+
+
+<div class="advantages-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="advantage-item">
+                    <div class="advantage-img position-relative blue">
+                        <img decoding="async" src="/wp-content/themes/img/mobile-first2.jpg" alt="mobile-first" class="invisible nolazyload">
+                        <div class="fadeInUp wow phonesWrapper" data-wow-duration="1.5s" data-wow-offset="250">
+                            <div class="blackPhone"></div>
+                            <div class="whitePhoneWrapper phoneMove wow" data-wow-duration="1s" data-wow-delay="1.3s">
+                                <div class="whitePhone"></div>
+                                <div class="whitePhone__screenPart screenPartMove wow" data-wow-duration=".7s" data-wow-delay="2.3s"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advantage-text">
+                        <div class="advantage-title">
+                            Mobile First Website Design
+                        </div>
+                        World-class design and fast loading multi-devices web site induces sales
+                        <div class="advantage-point screen-blue">
+                            <div class="advantage-point__title">
+                                Mobile-first Design
+                            </div>
+                            We create a site or web app by prototyping the smaller screen first and then the larger one.
+                        </div>
+                        <div class="advantage-point circle-blue">
+                            <div class="advantage-point__title">
+                                Fast Loading and Evocative Design
+                            </div>
+                            A fast mobile-first website gets top positions in Google. Generate more leads and customers
+                            for your business.
+                        </div>
+                        <a href="/mobile-first-website-design/" class="btn blue">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="advantages-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="advantage-item">
+                    <div class="advantage-img order-md-2 position-relative orange">
+                        <img decoding="async" src="/wp-content/themes/img/mobile-first2.jpg" alt="mobile-app" class="invisible nolazyload">
+                        <div class="fadeInUp wow phoneAndScreensWrapper" data-wow-duration="1.5s">
+                            <div class="main-phone"></div>
+                            <div class="main-phone__screen-1 wow" data-wow-duration="1.1s" data-wow-delay="1.3s"></div>
+                            <div class="main-phone__screen-2 wow" data-wow-duration="1.1s" data-wow-delay="1.3s"></div>
+                        </div>
+                    </div>
+                    <div class="advantage-text order-md-1">
+                        <div class="advantage-title">
+                            Cross Platform Applications
+                        </div>
+                        Development of easy-to-use mobile applications for B2B and B2C
+                        <div class="advantage-point screen-yellow">
+                            <div class="advantage-point__title">
+                                SaaS Applications and CRM Systems
+                            </div>
+                            Progressive Web Applications with smooth interaction across desktop and mobile devices.
+                        </div>
+                        <div class="advantage-point circle-yellow">
+                            <div class="advantage-point__title">
+                                React Native Apps for iOS/Android
+                            </div>
+                            Build native mobile apps using JavaScript and React.
+                        </div>
+                        <a href="/cross-platform-mobile-applications/" class="btn yellow">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="advantages-section last">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="advantage-item" style="background-color: #5750ad;">
+                    <div class="advantage-img digital-animation">
+         <div class="desktop devices-animation">
+              <div class="desktop__laptop"></div>
+              <div class="desktop__text"></div>
+              <div class="desktop__letter"></div>
+              <div class="desktop__lifebuoy"></div>
+              <div class="desktop__video"></div>
+              <div class="desktop__block"></div>
+            </div>
+         <div class="phone devices-animation">
+              <div class="phone__main"></div>
+              <div class="phone__text-purple"></div>
+              <div class="phone__text-white"></div>
+              <div class="phone__input"></div>
+              <div class="phone__video"></div>
+              <div class="phone__circle-red"></div>
+              <div class="phone__circle-purple"></div>
+            </div>
+            <div class="tablet devices-animation">
+              <div class="tablet__main"></div>
+              <div class="tablet__text-purple"></div>
+              <div class="tablet__text-white"></div>
+              <div class="tablet__block"></div>
+              <div class="tablet__border"></div>
+              <div class="tablet__like"></div>
+              <div class="tablet__text"></div>
+              <div class="tablet__gear"></div>
+            </div>
+            <div class="watch devices-animation">
+              <div class="watch__main"></div>
+              <div class="watch__screen1"></div>
+              <div class="watch__screen2"></div>
+              <div class="watch__screen3"></div>
+              <div class="watch__block"></div>
+              <div class="watch__red-btn"></div>
+            </div>  
+                    </div>
+                    <div class="advantage-text" style="background-color: white">
+                        <div class="advantage-title">
+                            Design Systems &amp; Digital Brand Identity
+                        </div>
+                        Create a Powerful Brand Identity and Design System that helps drive business growth
+                        <div class="advantage-point screen-purple">
+                            <div class="advantage-point__title">
+                                Design System Creation
+                            </div>
+                            Design system provides consistency in designing new elements of your app or product visual identification
+                        </div>
+                        <div class="advantage-point circle-purple">
+                            <div class="advantage-point__title">
+                                Brand Identity Design
+                            </div>
+                           Build a Brand Identity
+                            that Makes Your Business Memorable 
+                        </div>
+                        <a href="/design-systems/" class="btn purple">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<LastWork />
+
+
 </Layout>
