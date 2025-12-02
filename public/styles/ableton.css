@@ -1,0 +1,228 @@
+
+html, body {overflow-x: hidden;}
+
+/* MAIN STYLES ANIMATION BLOCKS */
+:root {
+   --bg-colored: #e7f1f4;
+   --bg-purple: #604be4;
+   --text-colored: #bfcacd;
+   --bg-dark-blue: #353a40;
+}
+html, body {
+   font-family: 'Roboto', sans-serif;
+}
+
+img {
+   max-width: 100%;
+}
+
+.block {
+   padding: 0 .9375rem;
+}
+
+.block__header {
+   position: relative;
+   padding-top: 1.875rem;
+   padding-bottom: 45px;
+}
+
+.block__content {
+   position: relative;
+}
+
+.block__text--small {
+   font-size: .8125rem;
+}
+
+.block__text--standart {
+   font-size: 1rem;
+   line-height: 1.625rem;
+}
+
+.block__text--center {
+   text-align: center;
+   max-width: 64%;
+}
+
+/* CUSTOM */
+.block--colored {
+   background-color: var(--bg-colored);
+}
+
+.block--dark-blue {
+   background-color: var(--bg-dark-blue);
+}
+
+.block__header--white {
+   color: white;
+}
+.block__text--black {
+   color: #000;
+}
+.block__text--colored {
+   color: var(--text-colored);
+}
+
+.block--purple {
+   background-color: var(--bg-purple);
+}
+
+.text-right {
+   text-align: right;
+}
+
+.text-center {
+   text-align: center;
+}
+
+/* GIDS */
+.grid {
+   display: -ms-grid;
+   display: grid;
+}
+
+@media (min-width: 992px) {
+   .grid-md-3 {
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+.grid-item {
+   padding: 1.25rem 0;
+   text-align: center;
+}
+
+.grid-md-container {
+   max-width: 48rem;
+   margin: 0 auto;
+}
+
+
+/* FIRST BLOCK */
+.block--first-animate, .block--six {
+   position: relative;
+   padding-bottom: 50%;
+   background-size: cover;
+   max-height: 41.5625rem;
+}
+
+.block__bg-effect {
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.block__bg-effect::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--bg-purple)), color-stop(70%, transparent));
+   background-image: -o-linear-gradient(var(--bg-purple), transparent 70%);
+   background-image: linear-gradient(var(--bg-purple), transparent 70%);
+   background-size: 100% 100%;
+   mix-blend-mode: difference;
+}
+
+
+
+.block__logo {
+   padding-top: 13%;
+}
+
+.block__footer {
+   padding: 5%;
+}
+
+/* Animation css */
+.block__animate {
+   -o-transition: all 1.2s ease;
+   -webkit-transition: all 1.2s ease;
+   transition: all 1.2s ease;
+   opacity: 0;
+   overflow:hidden !important; 
+    overflow-x: hidden;
+}
+.block__animate.animate {
+   -webkit-transform: none;
+   -ms-transform: none;
+       transform: none;
+   opacity: 1;
+}
+
+/* From Bottom animation */
+.block__animate-top {
+   -webkit-transform: translateY(100px);
+   -ms-transform: translateY(100px);
+       transform: translateY(100px);
+}
+
+/* From Left animation */
+.block__animate-left {
+   -webkit-transform: translateX(-100px);
+   -ms-transform: translateX(-100px);
+       transform: translateX(-100px);
+}
+
+/* From right animation */
+.block__animate-right {
+   -webkit-transform: translateX(100px);
+   -ms-transform: translateX(100px);
+       transform: translateX(100px);
+}
+
+/* From Top animation */
+.block__animate-bottom {
+   -webkit-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+       transform: translateY(-100px);
+}
+
+/* Duration */
+.block__animate--duration {
+   -webkit-transition-delay: 0.1s;
+        -o-transition-delay: 0.1s;
+           transition-delay: 0.1s;
+}
+
+.block__animate--duration-03 {
+   -webkit-transition-delay: 0.3s;
+        -o-transition-delay: 0.3s;
+           transition-delay: 0.3s;
+}
+
+.block__animate--duration-04 {
+   -webkit-transition-delay: 0.4s;
+        -o-transition-delay: 0.4s;
+           transition-delay: 0.4s;
+}
+
+.block__animate--duration-05 {
+   -webkit-transition-delay: 0.5s;
+        -o-transition-delay: 0.5s;
+           transition-delay: 0.5s;
+}
+
+/* MEDIA */
+@media (min-width: 992px) {
+   .block {
+      padding-left: 4.875rem;
+      padding-right: 4.875rem;
+   }
+
+   .block__header {
+      padding-top: 3.75rem;
+      padding-bottom: 5.3125rem;
+   }
+}
+
+/* MEDIA */
+@media (max-width: 450px) {
+
+.block__bg-effect {
+  background-attachment: inherit
+}
+}
