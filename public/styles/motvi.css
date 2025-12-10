@@ -2074,10 +2074,11 @@ left: 0;
   .social__body {
     padding-bottom: 1.875rem;
   }
-
+/*
   .social__row img {
     height: 100%;
   }
+*/
 
   .social__row {
     gap: 0.625rem;
