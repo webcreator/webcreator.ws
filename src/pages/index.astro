@@ -9,59 +9,61 @@ import LastWork from "../components/LastWork.astro";
 <script>
   import '../assets/js/index-animation.min.js';
 </script>
+<!-- 
 <script>
   import '../assets/js/app.min.js';
 </script>
+-->
 
-      <script>
-jQuery(document).ready(function(){
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
 
-	window.runAnimation = false;
-	
-	var blockWithAnimation = $('.last .digital-animation');
+  window.runAnimation = false;
 
-	$(blockWithAnimation).css('min-height', '430px');
-  
-	$(window).scroll(function() {
+  const blockWithAnimation = document.querySelector('.last .digital-animation');
 
-		var el = $(blockWithAnimation);
+  if (!blockWithAnimation) return;
 
-		   var hT = $(el).offset().top,
-			   hH = $(el).outerHeight(),
-			   wH = $(window).height(),
-			   wS = $(this).scrollTop();
-	   
-	   if (wS > (hT+hH-wH)) {
-	   
-			if (!window.runAnimation) {
+  blockWithAnimation.style.minHeight = '430px';
 
-				$.each($(".devices-animation"), function(idx, el){
-				
-					$(el).css('display', 'none');
-					
-					setTimeout(function () {
-					  $(el).css('display', 'block');
-					  if (idx > 2) {
-						window.runAnimation = true;
-					  }
-					});
-				
-					
-				});
-				
-			
-			}
-	   
-			
-		   
-	   } else {
-			window.runAnimation = false;
-	   }
-	   
-	});  
-  
+  window.addEventListener('scroll', function () {
+
+    const el = blockWithAnimation;
+
+    const hT = el.getBoundingClientRect().top + window.scrollY;
+    const hH = el.offsetHeight;
+    const wH = window.innerHeight;
+    const wS = window.scrollY;
+
+    if (wS > (hT + hH - wH)) {
+
+      if (!window.runAnimation) {
+
+        document.querySelectorAll('.devices-animation').forEach((el, idx) => {
+
+          el.style.display = 'none';
+
+          setTimeout(() => {
+            el.style.display = 'block';
+
+            if (idx > 2) {
+              window.runAnimation = true;
+            }
+          });
+
+        });
+
+      }
+
+    } else {
+      window.runAnimation = false;
+    }
+
+  });
+
 });
 </script>
+
 
 <div class="heading">
     <div class="container">
